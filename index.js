@@ -51,7 +51,7 @@ let callAPI = async (rev) => {
           data.push({ rev, capacity, ageLimit })
         }
       } else {
-        console.log('No data')
+        // console.log('No data')
       }
     })
     .catch((error) => {
@@ -71,4 +71,4 @@ setInterval(async () => {
   if (data.length) {
     sendNotification(data[0].rev, data[0].ageLimit)
   }
-}, minutes)
+}, the_interval)
